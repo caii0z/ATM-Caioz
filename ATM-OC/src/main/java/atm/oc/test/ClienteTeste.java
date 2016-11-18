@@ -12,13 +12,16 @@ import atm.oc.rmi.IRMII;
 public class ClienteTeste {
 
 	public static void main(String[] args) throws MalformedURLException, RemoteException, NotBoundException {
-		IRMII testejpa = (IRMII)Naming.lookup("rmi://127.1.1.1/rmi");
+		System.setProperty("java.rmi.server.hostname","10.51.11.12:1099");
+		IRMII testejpa = (IRMII)Naming.lookup("rmi://10.51.11.7:1099/rmi");
 		
-		MyFirstClass obj = new MyFirstClass();
+		System.out.println (testejpa);
+		
+		/*MyFirstClass obj = new MyFirstClass();
 		obj.setNumero(123);
 		obj.setTexto("Teste");
 		
-		testejpa.salvar(obj);
+		testejpa.salvar(obj);*/
 		
 		
 	}
