@@ -14,6 +14,7 @@ public class RMIServer {
 		RMIImpl rmi = new RMIImpl(port);
 		Naming.rebind("rmi", rmi);
 		System.err.println("Servidor RUNNING ");
+		
 
 	}
 }
